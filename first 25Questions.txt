@@ -1,0 +1,109 @@
+1. which property shouldbe used to find the repository where the configuration changes made in the web console are saved.
+-> Persistent identity (PID)
+
+2. How do you desable the "target" context menu items on components in AEM 6.0.
+A) Set the property "cq:disable Targeting" to true on the cq:editConfig node.
+
+3. Which statement about the usage of declaratives services while creating an OSGI components is true?
+A)  Component annotation is the only required annotationand missing which will NOT declare the class as component.
+
+4. which are the three statements about replication on a resource are true.
+.A. The replication rights are evaluated bottom-up in the node tree. B. The allow replication rights has higher precedence than deny replication rights. C. To grant replication rights to a user on any resource, user has to have read permissions for/etc/replication, /bin. D. The allow replication rights has lower precedence than deny replication rights. 
+
+Answer: B,C,D
+
+5. what are the three causes of Dispatcher stopped updating cache files in hte directory on the web server.
+
+A. The request to the page in question contain query string parameters. 
+B. The request to the page in question has authorization headers and dispatcher.any does not contain \allowAuthorized.
+ C. Dispatcher Flush agent is disabled on publish instance. 
+D. The request URI of the page in question should always start with /content. 
+Answer: A,B,D.
+
+6. In a public author and dispatcher setup, where is the DIspatcher flish is configured.
+A. Author instance
+
+7. which jar name can NOT be used to install an AEM publish instance.
+ A. CQ%-publish-4503,jar
+
+8. which property is deprecated while resloving a template(T) that can be used as a template for page(P)?
+A.cq:allowedTemplates property of the jcr:contentsubnode of P or an ancestor of P.
+
+9.Assume there are multiple publish instances (publ,pub2 and pub3) serving requests for an online shopping site. The end user is allowed to provide reviews and comments for each product and about their shopping experience. The Dispatcher module is in place to load balance the requests to publish instances and there is only one author instance, named author, where content editors create the pages. When a user, named User A, provides comments and the request being served by publish Instance publ, in which three ways are these comments replicated to pub2 and pub3? (Choose three.)
+A. Configure the dispatcher flush for the author pointing to a webserver uri on which the Dispatcheris deployed and configured. 
+B. Configure replication agents for the author pointing to publ, pub2 and pub3. 
+C. Configure reverse replication agents for the author pointing to publ, pub2 and pub3. 
+D. Configure a static agent for the author. 
+
+Answer: A,C,D
+
+10.Which template allowed Paths expression would allow a page to be created with the path/ content / main / page1/ page2?
+A./content/main/[A/]+[A/].
+
+11.You want to invert the order of display of components added to parsys provided out of the box. Recently added components always have to display on top. While implementing the new parsys component, which two options are valid? (Choose two).
+
+A. Copy the parsys component and all its contents from /libs/foundation/components/parsys to /apps/foundation/components/parsys and modify the applicable JSPs.
+ B. Copy the only applicable parsys component JSPs from /libs/foundation/components/parsys to /apps/foundation/components/parsys and modify them. 
+C. Create a new parsys component under/apps/<projectid>/components/content/myparsys and apply the property sling:resourceSuperType=foundation/components/parsy$, modify the JSP as applicable, 
+D. Create a new parsys component from scratch. 
+
+Answer: B,C
+
+12. You are logged as userA and you are impersonating userB. how are your activites logged in the access.log.
+
+A. The logged userId is "userB".
+
+13.Which OSGI bundle should be disable to restrict web_based log viewing.
+ A. Adobe CRXDE suppoer(com.day.crx.crxde-support)
+
+14.Which maven plugin allows direct insdtallation of the bundle ino AEM.
+A. mavan-javadoc-plugin.
+
+15.You have written an OSGi service with the class name com.acme.myapp.EmailUpdate, You only we this service to run on the publish instance. Which two configurations would run the service on the publish instance only?
+
+
+ANSWERS:
+B. /apps/myapp/config.publish/com.acme.myapp.EmailUpadate.config(node location) /apps/myapp/config.publish/com.acme.myapp.EmailUpadate.config is a node with a jcr:primaryType = nt:file.
+
+C. /apps/myapp/config.publish/com.acme.myapp.EmailUpadate config(node location)
+/apps/myapp/config.publish/com.acme.myapp.EmailUpadate.config is a node with a jcr:primaryType = sling.Osgiconfig.
+
+16. when installing internet information services, which Application Development Feature needs to be enable to work with the AEM DIspatcher.
+A. ISAPI filters.
+
+17.Which should be configured to create a custom log file with a different log level.
+A. apache Sling Logging Logger Configuration.
+
+*** Apache Sling Logging Configuration is used to configure the root logger, this defines the global settings for logging in AEM.
+
+18. Which is valid out-of-box sling run mode.
+A. production.
+
+19.Which command would you enter in your CQ Component script to get the template path of an AEM page in publish instance?
+A.Page.getTemplate();
+
+20. The same OSGI configuration parameter is  present under /libs/*/config.. AND /apps/*/config.. and modified in both locations as well as via felix conslone. Durning runtime, what is the reloader order.
+A. /libs/*/config, Felix consloe and /apps/*/config
+
+21. How do you delete a property inside a node object.
+A.node.setProperty("propertyName", null);
+
+22. When configuing a custom log file on aproduction publish instance, which two statemwnts are true.
+
+Answers: 
+C. Create a run mode based on Apache Sling Logging Logger configuration for publish run mode as org.apache.sling.commons.log.LogManager.factory.config-<identlfier>. 
+D. The physical location of the custom log file is NOT relative to the crx-quickstart folder.
+
+23. What does the vlt command "resolve" do?
+A. Removes the conflict- related artifact files.
+
+24. You add "sling.rn.modes=publish/f in sling.properties"  and start the instance using the command  "java-jar aem-6-p4502.jar -r author". in which mode the instance will start.
+A.Publish.
+
+25.Which are the best practices statements aare true regarding premissions and privilages.
+Answer:
+A. Access rights should not be assigned on a user-by-user basis. 
+B. Use deny statements to specify the access rights of a group of users. 
+C. After installation, update the passwords for the default users to prevent security breaches. 
+D. Use a test installation to ensure correct relationships between Users and Groups, 
+Answer: A,B,D 
